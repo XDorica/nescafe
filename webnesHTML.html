@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nescafe</title>
+    <link rel="stylesheet" href="webnesCSS.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Nescafe_Logo_white.png" alt="Nescafe Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Početna</a></li>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#products">Proizvodi</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#snake-game">Igraj</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="Nescafe.mp4" type="video/mp4">
+            Vaš preglednik ne podržava HTML5 video.
+        </video>
+        <div class="container hero-content">
+            <h1>Dobrodošli u svijet Nescafe</h1>
+            <p>Uživajte u svakom trenutku uz savršenstvo kave</p>
+            <button onclick="learnMore()">Saznajte više</button>
+        </div>
+    </section>
+    <section id="about" class="content-section about-animate">
+        <div class="container">
+            <h2>O nama</h2>
+            <p>
+                Dobrodošli u svijet Nescafe - mjesto gdje se ljubav prema kavi spaja s inovacijom i tradicijom. S preko 80 godina iskustva u proizvodnji kave, Nescafe je postao sinonim za kvalitetu i nezaboravan okus. Naša priča počinje davne 1938. godine kada je prvi put predstavljen Nescafe Classic, a od tada smo nastavili istraživati i inovirati kako bismo vam pružili najbolje trenutke uz šalicu savršene kave.
+            </p>
+            <h3>Zabavne činjenice o Nescafeu</h3>
+            <ul>
+                <li>Jeste li znali da se svakodnevno u svijetu popije preko 5.500 šalica Nescafe kave svake sekunde? To je puno zadovoljnih ljubitelja kave!</li>
+                <li>Nescafe je bio prva instant kava koja je stigla na Mount Everest 1953. godine sa Sir Edmundom Hillaryjem i Tenzing Norgayem.</li>
+                <li>Nescafe Classic, naš najprodavaniji proizvod, prvi put je predstavljen javnosti 1938. godine i od tada je osvojio srca milijuna ljudi širom svijeta.</li>
+                <li>Nescafe je u svojoj povijesti stvorio preko 30 različitih vrsta kave kako bi zadovoljio različite ukuse i preferencije potrošača.</li>
+                <li>Naša posvećenost održivosti ogleda se u programu "Nescafe Plan" koji pomaže poljoprivrednicima u više od 20 zemalja diljem svijeta poboljšati njihove prakse uzgoja kave.</li>
+            </ul>
+            
+        </div>
+    </section>
+    
+    <section id="products" class="content-section">
+        <video autoplay muted loop id="product-background-video">
+            <source src="nes_vid_dim.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <h2>Naši proizvodi</h2>
+            <div class="product-frame">
+                <div class="product-slide">
+                    <h3>Nescafe Latte</h3>
+                    <img class="productImage" src="nes_latte.png" alt="Nescafe Classic">
+                    <p>Autentični okus kave koji vas osvaja</p>
+                </div>
+                <div class="product-slide">
+                    <h3>Nescafe Espresso</h3>
+                    <img class="productImage" src="nes_espresso.png" alt="Nescafe Gold">
+                    <p>Intenzivni okus i bogata aroma pravog espressa</p>
+                </div>
+                <div class="product-slide">
+                    <h3>Nescafe Nitro</h3>
+                    <img class="productImage" src="nes-nitro.png" alt="Nescafe Classic">
+                    <p>Savršena kombinacija kave i mekoće pjene uz osvježavajući nitro dodatak</p>
+                </div>
+                <div class="product-slide">
+                    <h3>Nescafe Ice Black</h3>
+                    <img class="productImage" src="nes_iceblack.png" alt="Nescafe Gold">
+                    <p>Osvježavajući okus hladne kave u svakom gutljaju</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="contact" class="content-section">
+        <div class="container">
+            <h2>Kontaktiraj nas</h2>
+            <form>
+                <label for="name">Ime:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Poruka:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Pošalji</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="snake-game" class="content-section">
+        <div class="container">
+            <h2>Zaigraj zmijicu i osvoji Nesicu!</h2>
+            <canvas id="gameCanvas"></canvas>
+            <button id="restartButton">Ponovno pokreni igru</button>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourcompany"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/yourcompany"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/yourcompany"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>Adresa: Primjer ulice 123, Grad, Država</p>
+                    <p>Telefon: +123 456 789</p>
+                    <p>E-pošta: info@example.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Tvrtka. Sva prava pridržana.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="webnesJS.js"></script>
+</body>
+</html>

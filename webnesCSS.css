@@ -1,0 +1,484 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container class to center content */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header styling */
+header {
+    /*position: fixed;*/
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Postavljamo visok z-index kako bismo osigurali da je header iznad ostalog sadržaja */
+    background-color: #a78706; /* Dodajemo transparentnu boju pozadine kako bi se sadržaj ispod mogao vidjeti */
+}
+
+
+
+.logo img {
+    height: 70px;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section styling */
+.hero {
+    position: relative;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/*.hero button {
+    background-color: #c80000;
+    color: white;
+    border: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.hero button:hover {
+    background-color: #a00000;
+}*/
+
+
+.hero button {
+    border: 1px solid #c80000;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    }
+    
+.hero button{
+color: #fff;
+    }
+
+.hero button:hover{
+    color: #c80000;
+}    
+
+.hero button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:#c80000;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+
+
+.hero button::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;    
+}
+
+.hero button::before{
+    height: 180%;    
+}
+
+  .hero button:hover::before{
+    height: 0%;
+  }
+
+/* About section styling */
+#about {
+    background: #fdf6f0; /* Blaga boja pozadine */
+    padding: 60px 20px;
+}
+
+#about .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    color: #c80000; /* Boja koja se slaže s temom Nescafea */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#about h3 {
+    font-size: 2em;
+    color: #c80000;
+    margin-bottom: 15px;
+}
+
+#about ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about ul li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+ 
+
+
+/* Content sections styling */
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+    
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+.content-section p {
+    font-size: 1.2em;
+}
+
+/* Products section styling */
+/*#products {
+    position: relative;
+}
+
+#product-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.product {
+    display: inline-block;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05); 
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+} */
+
+
+
+/* Products section styling */
+#products {
+    position: relative;
+    height: 100vh; /* Da se sekcija proteže kroz cijeli ekran */
+    overflow: hidden; /* Sakrivanje prekoračenja slika unutar okvira */
+}
+
+#product-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Omogućuje video da pokriva cijelu površinu sekcije */
+    z-index: -1;
+}
+
+.product-frame {
+    width: 40%; /* Smanjivanje širine okvira */
+    max-width: 400px; /* Postavljanje maksimalne širine okvira */
+    height: auto;
+    margin: 0 auto;
+    border: 5px solid #a78706;
+    box-sizing: border-box;
+    text-align: center; /* Centriranje naslova i teksta */
+    padding: 20px; /* Dodavanje malo prostora unutar okvira */
+    overflow: hidden; /* Skrivanje vanjskog sadržaja koji prelazi okvir */
+}
+
+.product-slide {
+    display: none; /* Inicijalno sakrij sve proizvode */
+}
+
+.product-slide:first-child {
+    display: block; /* Prikaži prvi proizvod */
+}
+
+.product-slide img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.product-slide p {
+    font-size: 1em; /* Prilagođavanje veličine teksta */
+    color: #ffffff; /* Boja teksta */
+}
+
+.product-slide h3 {
+    font-size: 1em; /* Prilagođavanje veličine teksta */
+    color: #ffffff; /* Boja teksta */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact h2 {
+    color: #c80000;
+}
+
+/*form button {
+    background-color: #c80000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #a00000;
+}*/
+
+
+
+form button {
+    border: 1px solid #c80000;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    }
+    
+form button{
+color: #c80000;
+    }
+
+form button:hover{
+    color: #fff;
+}    
+
+form button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:#c80000;
+    z-index: -1;
+    transition: 0.8s;
+  }
+
+
+
+form button::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;    
+}
+
+form button::before{
+    height: 0%;    
+}
+
+form button:hover::before{
+    height: 180%;
+  }
+
+
+
+/* Snake game section styling */
+#snake-game {
+    padding: 40px 20px;
+    text-align: center;
+    
+    background: #f8f8f8;
+    margin: 20px 0;
+    
+}
+
+#snake-game h2 {
+    color: red;
+}
+
+
+#gameCanvas {
+    width: 100%;
+    height: auto;
+    border: 5px solid #a78706;
+    background-color: black; /* Crna boja pozadine igrališta */
+}
+
+/*#restartButton {
+    position: fixed;
+    display: none;  Početno stanje je skriveno 
+    background-color: #c80000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: 500px;
+}*/
+
+#snake-game #restartButton {
+    position: relative;
+    bottom: 200px; /* Prilagodite poziciju prema potrebi */
+    left: 570px; /* Prilagodite poziciju prema potrebi */
+    z-index: 999; /* Postavite viši z-index kako bi gumb bio iznad ostalog sadržaja */
+    display: none; /* Gumb će biti inicijalno sakriven */
+    background-color: #c80000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+
+#restartButton:hover {
+    background-color: #a00000;
+}
+
+
+
+
+
+
+/* Footer styling */
+footer {
+    background: #a78706;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
